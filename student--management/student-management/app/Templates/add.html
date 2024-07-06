@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block abc %}
+<div class="container mt-5">
+        <form class="col-6 mx-auto card p-3 shadow-lg" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h2>Add Student</h2>
+            <hr>
+            <div class="mb-3">
+              <label for="text" class="form-label">Name</label>
+              {{form.name}}
+            </div>
+            <div class="mb-3">
+              <label for="text" class="form-label">Roll</label>
+              {{form.roll}}
+            </div>
+            <div class="mb-3">
+                <label for="text" class="form-label">City</label>
+                {{form.city}}
+              </div>
+            
+            <button type="submit" class="btn btn-success">Add Student</button>
+          </form>
+    </div>
+{% endblock abc %}
